@@ -58,21 +58,27 @@
     listEl.innerHTML = `<div class="empty-state">Loading bookings…</div>`;
     try {
       const todayISO = toISODate(new Date());
+      // Single equality filter only (no range + orderBy combo), so this never
+      // needs a manual Firestore composite index. Date filtering and sorting
+      // for past bookings happens below, in plain JavaScript.
       const snap = await db.collection("bookings")
-        .where("date", ">=", todayISO)
         .where("status", "==", "confirmed")
-        .orderBy("date")
-        .orderBy("time")
         .get();
 
-      if (snap.empty) {
+      const upcoming = [];
+      snap.forEach((doc) => {
+        const b = doc.data();
+        if (b.date >= todayISO) upcoming.push({ id: doc.id, ...b });
+      });
+      upcoming.sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time));
+
+      if (upcoming.length === 0) {
         listEl.innerHTML = `<div class="empty-state">No upcoming bookings yet. Once a client books online, it'll show up here.</div>`;
         return;
       }
 
       const byDate = {};
-      snap.forEach((doc) => {
-        const b = { id: doc.id, ...doc.data() };
+      upcoming.forEach((b) => {
         if (!byDate[b.date]) byDate[b.date] = [];
         byDate[b.date].push(b);
       });
