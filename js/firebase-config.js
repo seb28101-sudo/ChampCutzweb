@@ -29,12 +29,12 @@
    ============================================================ */
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyA_ykOPyQs4HekEV35XeYTiwbnKtg-D2vw",
+  authDomain: "champcutz-74708.firebaseapp.com",
+  projectId: "champcutz-74708",
+  storageBucket: "champcutz-74708.firebasestorage.app",
+  messagingSenderId: "214477630291",
+  appId: "1:214477630291:web:d966ed34e158c42dc74fa6",
 };
 
 // Shared shop settings used across booking.js and admin.js
