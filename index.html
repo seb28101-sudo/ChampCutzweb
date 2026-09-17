@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Champ Cutz | Barber in Constantia &amp; Meadowridge, Cape Town</title>
+<meta name="description" content="Champ Cutz is a barbershop in Constantia/Meadowridge, Cape Town. Skin fades, tapers, beard work and kids cuts — book a chair time online." />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#home" class="brand">
+      <img src="assets/logo.png" alt="Champ Cutz logo" />
+      <span class="brand-name">CHAMP CUTZ</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+27606893544" class="btn btn-outline">Call</a>
+      <a href="booking.html" class="btn btn-primary">Book Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="pole-stripe"></div>
+
+<main id="home">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">CONSTANTIA &amp; MEADOWRIDGE, CAPE TOWN</span>
+        <h1>Artwork,<br>without erasing.</h1>
+        <p class="lede">Every fade, taper and line-up is planned before the first pass of the clippers. No guesswork, no do-overs — just a clean cut, done properly the first time.</p>
+        <div class="hero-actions">
+          <a href="booking.html" class="btn btn-primary">Book a chair time</a>
+          <a href="#services" class="btn btn-outline on-dark">See prices</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <strong>Mon – Fri</strong>
+            10:00 – 15:00
+          </div>
+          <div>
+            <strong>Est. 2024</strong>
+            Building a name, one cut at a time
+          </div>
+          <div>
+            <strong>@champcutz_</strong>
+            Follow the work on Instagram
+          </div>
+        </div>
+      </div>
+      <div class="hero-medallion">
+        <img src="assets/logo.png" alt="Champ Cutz emblem" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-medallion">
+        <img src="assets/logo.png" alt="Champ Cutz" />
+      </div>
+      <div class="about-copy">
+        <p class="quote">"Artwork without erasing" isn't a slogan here — it's how every appointment gets planned.</p>
+        <p>Champ Cutz is a one-chair barbershop built on precision: skin fades, tapers and scissor work mapped out before the clippers touch your head. No rushing, no filler appointments — just a barber who treats every cut like it's going on show.</p>
+        <div class="about-stats">
+          <div>
+            <strong>1-on-1</strong>
+            <span>Every cut, no handoffs</span>
+          </div>
+          <div>
+            <strong>Mon–Fri</strong>
+            <span>10am – 3pm</span>
+          </div>
+          <div>
+            <strong>212+</strong>
+            <span>Regulars on Instagram</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What you're getting</h2>
+        <p>Straightforward pricing, no surprises at the chair. Pick a service when you book online and the site works out how much time to set aside.</p>
+      </div>
+      <div class="price-board">
+        <!-- Keep this list in sync with SERVICES in js/firebase-config.js -->
+        <div class="price-row">
+          <div class="price-name"><span class="n">Skin Fade</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">45 min</span><span class="price-amount">R150</span></div>
+        </div>
+        <div class="price-row">
+          <div class="price-name"><span class="n">Regular Cut</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">30 min</span><span class="price-amount">R120</span></div>
+        </div>
+        <div class="price-row">
+          <div class="price-name"><span class="n">Cut &amp; Beard Combo</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">45 min</span><span class="price-amount">R180</span></div>
+        </div>
+        <div class="price-row">
+          <div class="price-name"><span class="n">Beard Trim</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">20 min</span><span class="price-amount">R80</span></div>
+        </div>
+        <div class="price-row">
+          <div class="price-name"><span class="n">Kids Cut (under 12)</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">30 min</span><span class="price-amount">R100</span></div>
+        </div>
+        <div class="price-row">
+          <div class="price-name"><span class="n">Line Up</span><span class="leader"></span></div>
+          <div class="price-meta"><span class="price-time">15 min</span><span class="price-amount">R60</span></div>
+        </div>
+      </div>
+      <p class="price-note">Prices shown are placeholders set for launch — update them anytime in <code>js/firebase-config.js</code> and this page.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Fresh off the chair</h2>
+        <p>A few recent cuts. Swap these for real photos any time — see the note in README.md.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="frame">
+          <img src="assets/gallery/gallery-1.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-1.jpg</code></div>
+        </div>
+        <div class="frame">
+          <img src="assets/gallery/gallery-2.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-2.jpg</code></div>
+        </div>
+        <div class="frame">
+          <img src="assets/gallery/gallery-3.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-3.jpg</code></div>
+        </div>
+        <div class="frame">
+          <img src="assets/gallery/gallery-4.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-4.jpg</code></div>
+        </div>
+        <div class="frame">
+          <img src="assets/gallery/gallery-5.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-5.jpg</code></div>
+        </div>
+        <div class="frame">
+          <img src="assets/gallery/gallery-6.jpg" alt="Recent cut at Champ Cutz" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;">Add photo<br><code>gallery-6.jpg</code></div>
+        </div>
+      </div>
+      <div class="gallery-cta">
+        <a href="https://instagram.com/champcutz_" target="_blank" rel="noopener" class="btn btn-outline">See more on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="book-band">
+    <div class="wrap">
+      <div>
+        <h2>Pick a time. That's it.</h2>
+        <p>Real availability, checked live — no back-and-forth on WhatsApp.</p>
+      </div>
+      <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section-alt">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="section-head" style="margin-bottom: 26px;">
+          <h2>Find the chair</h2>
+        </div>
+        <ul class="contact-list">
+          <li><span class="k">Address</span><span>5 Dalton Way, Meadowridge, Cape Town, South Africa</span></li>
+          <li><span class="k">Phone</span><a href="tel:+27606893544">060 689 3544</a></li>
+          <li><span class="k">WhatsApp</span><a href="https://wa.me/27606893544" target="_blank" rel="noopener">Message on WhatsApp</a></li>
+          <li><span class="k">Instagram</span><a href="https://instagram.com/champcutz_" target="_blank" rel="noopener">@champcutz_</a></li>
+        </ul>
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>10:00 – 15:00</td></tr>
+          <tr class="closed"><td>Saturday</td><td>Closed</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=5%20Dalton%20Way%2C%20Meadowridge%2C%20Cape%20Town%2C%20South%20Africa&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Champ Cutz location map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Champ Cutz" />
+      <span>CHAMP CUTZ</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="booking.html">Book</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="admin.html">Staff Login</a></li>
+    </ul>
+    <span>&copy; <span data-year></span> Champ Cutz. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

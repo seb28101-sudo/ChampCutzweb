@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Staff Login | Champ Cutz</title>
+<link rel="icon" href="assets/logo.png" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="admin-shell">
+
+<!-- LOGIN VIEW -->
+<div id="loginView" class="admin-login">
+  <h1>Staff Login</h1>
+  <p class="sub">Champ Cutz admin dashboard.</p>
+  <div id="configWarning" class="form-msg error" style="display:none;">
+    Not connected yet. Add Firebase details to <code>js/firebase-config.js</code> and enable Email/Password sign-in — see README.md.
+  </div>
+  <form id="loginForm">
+    <div class="field">
+      <label for="emailInput">Email</label>
+      <input type="email" id="emailInput" required autocomplete="username" />
+    </div>
+    <div class="field">
+      <label for="passInput">Password</label>
+      <input type="password" id="passInput" required autocomplete="current-password" />
+    </div>
+    <div id="loginError" class="form-msg error" style="display:none;"></div>
+    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+  </form>
+  <p style="margin-top:18px; text-align:center;"><a href="index.html" style="color:var(--blue); font-weight:600; text-decoration:none;">&larr; Back to site</a></p>
+</div>
+
+<!-- DASHBOARD VIEW -->
+<div id="dashView" style="display:none;">
+  <div class="admin-bar">
+    <div class="wrap">
+      <a href="index.html" class="brand"><img src="assets/logo.png" alt="" /><span class="brand-name">CHAMP CUTZ</span></a>
+      <button class="btn btn-outline on-dark" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+
+  <main class="admin-main">
+    <div class="wrap admin-cols">
+
+      <div>
+        <div class="admin-card">
+          <h2>Upcoming bookings</h2>
+          <p class="sub">Newest requests land here the moment a client books — no need to check WhatsApp.</p>
+          <div id="bookingsList">
+            <div class="empty-state">Loading bookings…</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="admin-card">
+          <h2>Days off</h2>
+          <p class="sub">Block a date and it won't show as bookable on the site.</p>
+          <ul class="blocked-list" id="blockedList"></ul>
+          <form class="inline-form" id="blockForm">
+            <input type="date" id="blockDateInput" required />
+            <button type="submit" class="btn btn-outline" style="white-space:nowrap;">Block</button>
+          </form>
+        </div>
+
+        <div class="admin-card">
+          <h2>Shop info</h2>
+          <p class="sub">Edited in <code>js/firebase-config.js</code>, not here.</p>
+          <ul class="contact-list" style="margin:0;">
+            <li><span class="k">Hours</span><span>Mon–Fri, 10:00–15:00</span></li>
+            <li><span class="k">Phone</span><span id="infoPhone"></span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
